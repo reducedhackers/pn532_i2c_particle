@@ -1,4 +1,4 @@
-#include <PN532_I2C.h>
+#include <pn532_i2c.h>
 #include <PN532.h>
 #include <NfcAdapter.h>
 
