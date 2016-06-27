@@ -2,7 +2,6 @@
 #ifndef __PN532_I2C_H__
 #define __PN532_I2C_H__
 
-#include <Wire.h>
 #include "PN532Interface.h"
 
 class PN532_I2C : public PN532Interface {
