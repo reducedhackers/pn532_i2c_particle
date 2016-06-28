@@ -2,7 +2,7 @@
 #ifndef __PN532_I2C_H__
 #define __PN532_I2C_H__
 
-#include "PN532Interface.h"
+#include "pn532_i2c/PN532/PN532Interface.h"
 
 class PN532_I2C : public PN532Interface {
 public:
