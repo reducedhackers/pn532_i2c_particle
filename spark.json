@@ -2,6 +2,6 @@
   "name": "pn532_i2c",
   "author": "Nik butler",
   "license": "as per license file",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Basic Library for pn532 i2c two wire (wire.h)  SDA/SCL connection; "
 }
