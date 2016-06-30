@@ -5,9 +5,9 @@
 #if defined(SPARK)
 # include "Particle.h"
 #else
-# include <Arduino.h>
+# include "Arduino.h"
 #endif
-#include <NdefMessage.h>
+#include "NdefMessage.h"
 
 class NfcTag
 {

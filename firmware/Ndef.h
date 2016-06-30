@@ -8,7 +8,7 @@
 #if defined(SPARK)
 # include "Particle.h"
 #else
-# include <Arduino.h>
+# include "Arduino.h"
 #endif
 
 #define NULL (void *)0

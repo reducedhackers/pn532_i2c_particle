@@ -5,7 +5,7 @@
 # include "Particle.h"
 #else
 #include "Due.h"
-#include <Arduino.h>
+#include "Arduino.h"
 #endif
 #include "Ndef.h"
 
