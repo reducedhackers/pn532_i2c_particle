@@ -1,5 +1,5 @@
 
-#include "pn532_i2c.h"
+#include "pn532_i2c_particle.h"
 #include "PN532_debug.h"
 
 

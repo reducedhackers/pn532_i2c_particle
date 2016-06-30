@@ -2,8 +2,11 @@
 #define __DEBUG_H__
 
 //#define DEBUG
-
-#include "Particle.h"
+#if defined(SPARK)
+# include "Particle.h"
+#else
+# include "Arduino.h"
+#endif
 
 #ifdef DEBUG
 #define DMSG(args...)       Serial.print(args)

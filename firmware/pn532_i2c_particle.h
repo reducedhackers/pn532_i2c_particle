@@ -2,7 +2,11 @@
 #ifndef __PN532_I2C_H__
 #define __PN532_I2C_H__
 
-#include "pn532_i2c_particle/PN532Interface.h"
+#if defined(SPARK)
+# include "Particle.h"
+#endif
+
+#include "PN532Interface.h"
 
 class PN532_I2C : public PN532Interface {
 public:
@@ -20,18 +24,18 @@ private:
     int8_t readAckFrame();
     
     inline uint8_t write(uint8_t data) {
-        #if ARDUINO >= 100
-            return _wire->write(data);
+        #if (ARDUINO >= 100) || defined(SPARK)
+          return _wire->write(data);
         #else
-            return _wire->send(data);
+          return _wire->send(data);
         #endif
     }
     
     inline uint8_t read() {
-        #if ARDUINO >= 100
-            return _wire->read();
+        #if (ARDUINO >= 100) || defined(SPARK)
+          return _wire->read();
         #else
-            return _wire->receive();
+          return _wire->receive();
         #endif
     }
 };

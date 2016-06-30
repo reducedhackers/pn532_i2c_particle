@@ -6,7 +6,11 @@
 */
 /**************************************************************************/
 
-#include "Arduino.h"
+#if defined(SPARK)
+# include "Particle.h"
+#else
+# include "Arduino.h"
+#endif
 #include "PN532.h"
 #include "PN532_debug.h"
 #include <string.h>
@@ -39,7 +43,7 @@ void PN532::begin()
 /**************************************************************************/
 void PN532::PrintHex(const uint8_t *data, const uint32_t numBytes)
 {
-#ifdef ARDUINO
+#if defined(ARDUINO) || defined(SPARK)
     for (uint8_t i = 0; i < numBytes; i++) {
         if (data[i] < 0x10) {
             Serial.print(" 0");
@@ -70,8 +74,8 @@ void PN532::PrintHex(const uint8_t *data, const uint32_t numBytes)
 /**************************************************************************/
 void PN532::PrintHexChar(const uint8_t *data, const uint32_t numBytes)
 {
-#ifdef ARDUINO
-    for (uint8_t i = 0; i < numBytes; i++) {
+#if defined(ARDUINO) || defined(SPARK)
+  for (uint8_t i = 0; i < numBytes; i++) {
         if (data[i] < 0x10) {
             Serial.print(" 0");
         } else {
