@@ -1,5 +1,5 @@
 {
-  "name": "particle_pn532_i2c_ndef",
+  "name": "pn532_i2c_particle",
   "author": "Nik butler",
   "license": "as per license file",
   "version": "0.0.18",
