@@ -1,7 +1,7 @@
 {
-  "name": "pn532_i2c",
+  "name": "particle_pn532_i2c_ndef",
   "author": "Nik butler",
   "license": "as per license file",
   "version": "0.0.18",
-  "description": "Basic Library for pn532 i2c two wire (wire.h)  SDA/SCL connection; "
+  "description": "Basic Library for pn532 i2c two wire (wire.h) SDA/SCL connection; using NDEF Interface "
 }
