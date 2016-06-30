@@ -1,13 +1,13 @@
 #ifndef NdefRecord_h
 #define NdefRecord_h
 
-#include <Due.h>
 #if defined(SPARK)
 # include "Particle.h"
 #else
+#include "Due.h"
 #include <Arduino.h>
 #endif
-#include <Ndef.h>
+#include "Ndef.h"
 
 #define TNF_EMPTY 0x0
 #define TNF_WELL_KNOWN 0x01

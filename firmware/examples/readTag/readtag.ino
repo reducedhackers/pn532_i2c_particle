@@ -1,6 +1,6 @@
 #include "pn532_i2c_particle/pn532_i2c_particle.h"
-#include "pn532_i2c_particle/PN532/PN532.h"
-#include "pn532_i2c_particle/NDEF/NfcAdapter.h"
+#include "pn532_i2c_particle/PN532.h"
+#include "pn532_i2c_particle/NfcAdapter.h"
 
 PN532_I2C pn532_i2c(Wire);
 NfcAdapter nfc = NfcAdapter(pn532_i2c);
