@@ -3,7 +3,7 @@
 
 #include "PN532Interface.h"
 #include "PN532.h"
-#include "NfcTag.h
+#include "NfcTag.h"
 #include "Ndef.h"
 
 // Drivers
