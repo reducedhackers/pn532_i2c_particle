@@ -1,8 +1,6 @@
 
-#include "pn532_i2c/pn532_i2c.h"
-#include "PN532/PN532_debug.h"
-
-#include "Particle.h" 
+#include "pn532_i2c.h"
+#include "PN532_debug.h"
 
 
 #define PN532_I2C_ADDRESS       (0x48 >> 1)
