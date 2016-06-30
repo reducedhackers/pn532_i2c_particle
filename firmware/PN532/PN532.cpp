@@ -6,7 +6,11 @@
 */
 /**************************************************************************/
 
-#include "Arduino.h"
+#if defined(SPARK)
+# include "Particle.h"
+#else
+# include "Arduino.h"
+#endif
 #include "PN532.h"
 #include "PN532_debug.h"
 #include <string.h>

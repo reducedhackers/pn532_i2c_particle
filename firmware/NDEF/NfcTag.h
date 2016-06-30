@@ -2,7 +2,11 @@
 #define NfcTag_h
 
 #include <inttypes.h>
-#include <Arduino.h>
+#if defined(SPARK)
+# include "Particle.h"
+#else
+# include <Arduino.h>
+#endif
 #include <NdefMessage.h>
 
 class NfcTag

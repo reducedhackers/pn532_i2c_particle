@@ -5,7 +5,11 @@
    See README.md for details on which files to include in your sketch.
 */
 
-#include <Arduino.h>
+#if defined(SPARK)
+# include "Particle.h"
+#else
+# include <Arduino.h>
+#endif
 
 #define NULL (void *)0
 

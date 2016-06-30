@@ -2,7 +2,11 @@
 #define NdefRecord_h
 
 #include <Due.h>
+#if defined(SPARK)
+# include "Particle.h"
+#else
 #include <Arduino.h>
+#endif
 #include <Ndef.h>
 
 #define TNF_EMPTY 0x0
