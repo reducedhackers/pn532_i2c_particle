@@ -16,7 +16,12 @@ void loop(void) {
     if (nfc.tagPresent())
     {
         NfcTag tag = nfc.read();
-        tag.print();
+        //tag.print();
+        if(tag.hasNdefMessage()){
+                NdefMessage tagMessage = tag.getNdefMessage();
+            
+        }
+        }
     }
     delay(5000);
 }
