@@ -22,6 +22,8 @@ void loop(void) {
                 for (i = 0; i < tagMessage.getRecordCount()   ; i++)  {
                          //
                          NdefRecord tagRecord = tagMessage.getRecord(i);
+                         int payloadLength = tagRecord.getPayloadLength();
+                         char *tagMessage[payloadLength];
                          tagRecord.print();
                          
                 }
