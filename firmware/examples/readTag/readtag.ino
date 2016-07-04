@@ -16,7 +16,6 @@ void loop(void) {
     if (nfc.tagPresent())
     {
         NfcTag tag = nfc.read();
-        //tag.print();
         if(tag.hasNdefMessage()){
                 NdefMessage tagMessage = tag.getNdefMessage();
                 int i;
