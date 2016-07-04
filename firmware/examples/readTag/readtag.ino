@@ -28,4 +28,5 @@ void loop(void) {
         }
     }
     delay(5000);
+    Particle.process();
 }
