@@ -19,8 +19,13 @@ void loop(void) {
         //tag.print();
         if(tag.hasNdefMessage()){
                 NdefMessage tagMessage = tag.getNdefMessage();
-            
-        }
+                int i;
+                for (i = 0; i < tagMessage.getRecordCount()   ; i++)  {
+                         //
+                         NdefRecord tagRecord = tagMessage.getRecord(i);
+                         tagRecord.print();
+                         
+                }
         }
     }
     delay(5000);
