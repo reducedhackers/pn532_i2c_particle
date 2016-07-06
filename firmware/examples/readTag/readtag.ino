@@ -1,4 +1,3 @@
-#define DEBUG=false
 #include "application.h"
 #include "pn532_i2c_particle/pn532_i2c_particle.h"
 #include "pn532_i2c_particle/PN532.h"
