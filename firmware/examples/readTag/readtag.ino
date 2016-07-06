@@ -20,25 +20,25 @@ void loop(void) {
         NfcTag tag = nfc.read();
         if(tag.hasNdefMessage()){
                 NdefMessage tagMessage = tag.getNdefMessage();
+                 // at this point tag.print() will dump a NDefMessage for every record.
                 int i;
                 for (i = 0; i < tagMessage.getRecordCount()   ; i++)  {
                     NdefRecord tagRecord = tagMessage.getRecord(i);
                     int payloadLength = tagRecord.getPayloadLength();
                     byte payload[payloadLength];
                     tagRecord.getPayload(payload);
-                    for (uint8_t i = 0; i < payloadLength; i++) {
-                        char c = payload[i];
-                        if (c <= 0x1f || c > 0x7f) {
-                            Serial.print('.');
-                            } else {
-                            Serial.print(c);
-                        }
-                    }
-                    Serial.println("");
+                    char tagMessage[payloadLength + 1];
+                    memcpy(tagMessage, payload , payloadLength);
+                    tagMessage[payloadLength + 1] =  '\0';
+                    Serial.println(tagMessage);
                 }
         }
     }
     delay(5000);
+    // I have noticed that without the call to Particle Process 
+    // I can end up with the code giving me a pusling green; Wifi working but 
+    // no communication with the cloud; it will have made one connection 
+    // and then it stops listeing to the cloud
     Particle.process();
 }
 
