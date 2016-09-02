@@ -1,1 +1,15 @@
 20160606 - making Notes files.
+
+20160902 - I have noticed that if a suitable board is not located then the photon process which connects
+to the cloud will not carry out its task and the photon switches to strobe/breath green
+
+Currently the wiring is. 
+
+NFC BOARD    ---- PHOTON
+pin 3v3  --- VCC
+pin ND ---- GND
+
+pin D1 --- SCL
+pin D0 --- SDA
+
+
